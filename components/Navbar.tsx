@@ -86,7 +86,7 @@ export default function Navbar({ variant = "transparent" }: { variant?: "transpa
         </ul>
 
         <div className="flex items-center gap-3">
-          <motion.button
+          <motion.div
             onMouseEnter={() => setIsNavHovered(true)}
             onMouseLeave={() => setIsNavHovered(false)}
             layout
@@ -98,6 +98,7 @@ export default function Navbar({ variant = "transparent" }: { variant?: "transpa
               isNavHovered ? "flex-row-reverse pl-1.5 pr-[16px]" : "flex-row pl-[16px] pr-1.5"
             )}
           >
+            <Link href="/get-started" className="contents">
             <motion.span
               layout
               className="font-inter text-sm lg:text-base font-medium leading-6 tracking-[-0.3px] text-[#042718]"
@@ -118,7 +119,8 @@ export default function Navbar({ variant = "transparent" }: { variant?: "transpa
                 <ArrowUpRight className="w-3 h-3 text-[#042718]" />
               </motion.div>
             </motion.div>
-          </motion.button>
+            </Link>
+          </motion.div>
 
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -185,7 +187,7 @@ export default function Navbar({ variant = "transparent" }: { variant?: "transpa
 
               <div className="mt-auto">
                 <Link
-                  href="#"
+                  href="/get-started"
                   onClick={() => setIsMobileMenuOpen(false)}
                   className="flex items-center justify-center w-full py-4 rounded-full bg-[#042718] text-white font-inter font-medium text-lg"
                 >

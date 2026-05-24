@@ -1,95 +1,11 @@
 "use client";
 
 import React, { useState } from "react";
+import Link from "next/link";
 import { motion } from "framer-motion";
 import { Sparkles, ArrowUpRight, Clock } from "lucide-react";
 import { cn } from "@/lib/utils";
-
-interface BlogPost {
-  category: string;
-  title: string;
-  excerpt: string;
-  author: string;
-  authorAvatar: string;
-  readTime: string;
-  date: string;
-  cover: string;
-  featured?: boolean;
-}
-
-const posts: BlogPost[] = [
-  {
-    category: "Product",
-    title: "Introducing predictive cash flow: see next month before it arrives",
-    excerpt: "Our new forecasting engine uses 60 days of history to project your balance, bills, and surprise expenses for the month ahead.",
-    author: "Lena Rodriguez",
-    authorAvatar: "https://i.pravatar.cc/80?img=44",
-    readTime: "6 min",
-    date: "May 12, 2026",
-    cover: "https://images.unsplash.com/photo-1620287341056-49a2f1ab2fdc?w=900&q=80",
-    featured: true
-  },
-  {
-    category: "Engineering",
-    title: "How we sync 12,000 banks in under 100ms",
-    excerpt: "A look under the hood at our event-driven ingestion pipeline, lock-free queues, and the boring tricks that made it fast.",
-    author: "Kojo Mensah",
-    authorAvatar: "https://i.pravatar.cc/80?img=60",
-    readTime: "9 min",
-    date: "May 8, 2026",
-    cover: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&q=80"
-  },
-  {
-    category: "Security",
-    title: "Bank-grade encryption is a floor, not a ceiling",
-    excerpt: "Why we went beyond compliance and built layered defenses most fintech companies skip entirely.",
-    author: "Mateo Rossi",
-    authorAvatar: "https://i.pravatar.cc/80?img=33",
-    readTime: "7 min",
-    date: "Apr 28, 2026",
-    cover: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&q=80"
-  },
-  {
-    category: "Money Tips",
-    title: "Five subscription leaks costing the average household $400/yr",
-    excerpt: "We analyzed 50,000 anonymized accounts. The boring leaks add up faster than the dramatic ones.",
-    author: "Aria Nasser",
-    authorAvatar: "https://i.pravatar.cc/80?img=49",
-    readTime: "5 min",
-    date: "Apr 22, 2026",
-    cover: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&q=80"
-  },
-  {
-    category: "Design",
-    title: "Designing for financial clarity, not financial drama",
-    excerpt: "Why we removed red numbers, alarming icons, and most of the dashboards you&rsquo;d expect.",
-    author: "Hana Suzuki",
-    authorAvatar: "https://i.pravatar.cc/80?img=20",
-    readTime: "4 min",
-    date: "Apr 15, 2026",
-    cover: "https://images.unsplash.com/photo-1559028012-481c04fa702d?w=800&q=80"
-  },
-  {
-    category: "Company",
-    title: "Series B: $42M to make money tools that actually help",
-    excerpt: "Why we raised, who joined the cap table, and what we&rsquo;re building next.",
-    author: "Arjun Mehta",
-    authorAvatar: "https://i.pravatar.cc/80?img=15",
-    readTime: "3 min",
-    date: "Apr 2, 2026",
-    cover: "https://images.unsplash.com/photo-1554224154-26032ffc0d07?w=800&q=80"
-  },
-  {
-    category: "Money Tips",
-    title: "The 60/20/20 rule beats the 50/30/20 for most people",
-    excerpt: "A small change in budget split that compounds over a career. Math inside.",
-    author: "Aria Nasser",
-    authorAvatar: "https://i.pravatar.cc/80?img=49",
-    readTime: "6 min",
-    date: "Mar 25, 2026",
-    cover: "https://images.unsplash.com/photo-1579621970795-87facc2f976d?w=800&q=80"
-  }
-];
+import { posts, type BlogPost } from "@/lib/blog-posts";
 
 const categories = ["All", "Product", "Engineering", "Security", "Money Tips", "Design", "Company"];
 
@@ -101,8 +17,12 @@ function PostCard({ post, isFeatured = false, delay = 0 }: { post: BlogPost; isF
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.7, delay, ease: "easeOut" as const }}
-        className="lg:col-span-2 group cursor-pointer flex flex-col lg:flex-row gap-5 sm:gap-6 lg:gap-10 p-5 sm:p-6 lg:p-8 rounded-[20px] sm:rounded-[24px] bg-white border border-[#042718]/[0.06] shadow-[0_1px_20px_0_rgba(4,39,24,0.04)] hover:shadow-[0_4px_30px_0_rgba(4,39,24,0.08)] transition-shadow"
+        className="lg:col-span-2 flex"
       >
+        <Link
+          href={"/blogs/" + post.slug}
+          className="group cursor-pointer flex flex-col lg:flex-row gap-5 sm:gap-6 lg:gap-10 p-5 sm:p-6 lg:p-8 rounded-[20px] sm:rounded-[24px] bg-white border border-[#042718]/[0.06] shadow-[0_1px_20px_0_rgba(4,39,24,0.04)] hover:shadow-[0_4px_30px_0_rgba(4,39,24,0.08)] transition-shadow w-full"
+        >
         <div className="relative w-full lg:w-[400px] aspect-[16/10] sm:aspect-[4/3] lg:aspect-auto lg:h-auto rounded-[14px] sm:rounded-[16px] overflow-hidden shrink-0">
           <img
             src={post.cover}
@@ -138,6 +58,7 @@ function PostCard({ post, isFeatured = false, delay = 0 }: { post: BlogPost; isF
             <ArrowUpRight className="w-5 h-5 text-[#042718]/40 group-hover:text-[#198F38] group-hover:translate-x-1 group-hover:-translate-y-1 transition-all" />
           </div>
         </div>
+        </Link>
       </motion.article>
     );
   }
@@ -148,38 +69,43 @@ function PostCard({ post, isFeatured = false, delay = 0 }: { post: BlogPost; isF
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.6, delay, ease: "easeOut" as const }}
-      className="group cursor-pointer flex flex-col rounded-[20px] bg-white border border-[#042718]/[0.06] overflow-hidden hover:shadow-[0_4px_30px_0_rgba(4,39,24,0.08)] transition-shadow"
+      className="flex"
     >
-      <div className="relative w-full aspect-[16/10] overflow-hidden">
-        <img
-          src={post.cover}
-          alt={post.title}
-          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-        />
-      </div>
-      <div className="flex flex-col p-5 lg:p-6 flex-1">
-        <div className="flex items-center gap-3 mb-3">
-          <span className="px-2.5 py-0.5 rounded-full bg-[#198F38]/10 text-[#198F38] font-inter text-[11px] font-semibold uppercase tracking-wider">
-            {post.category}
-          </span>
-          <span className="text-[#042718]/60 font-inter text-xs flex items-center gap-1">
-            <Clock className="w-3 h-3" /> {post.readTime}
-          </span>
+      <Link
+        href={"/blogs/" + post.slug}
+        className="group cursor-pointer flex flex-col rounded-[20px] bg-white border border-[#042718]/[0.06] overflow-hidden hover:shadow-[0_4px_30px_0_rgba(4,39,24,0.08)] transition-shadow w-full"
+      >
+        <div className="relative w-full aspect-[16/10] overflow-hidden">
+          <img
+            src={post.cover}
+            alt={post.title}
+            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+          />
         </div>
-        <h3 className="text-[#042718] font-onest text-lg lg:text-xl font-semibold leading-tight tracking-[-0.4px] mb-2 group-hover:text-[#198F38] transition-colors flex-1">
-          {post.title}
-        </h3>
-        <p className="text-[#042718] font-inter text-sm font-normal leading-relaxed opacity-70 mb-5 line-clamp-2">
-          {post.excerpt}
-        </p>
-        <div className="flex items-center justify-between pt-4 border-t border-[#042718]/[0.06] mt-auto">
-          <div className="flex items-center gap-2">
-            <img src={post.authorAvatar} alt={post.author} className="w-7 h-7 rounded-full object-cover" />
-            <span className="text-[#042718] font-onest text-xs font-semibold">{post.author}</span>
+        <div className="flex flex-col p-5 lg:p-6 flex-1">
+          <div className="flex items-center gap-3 mb-3">
+            <span className="px-2.5 py-0.5 rounded-full bg-[#198F38]/10 text-[#198F38] font-inter text-[11px] font-semibold uppercase tracking-wider">
+              {post.category}
+            </span>
+            <span className="text-[#042718]/60 font-inter text-xs flex items-center gap-1">
+              <Clock className="w-3 h-3" /> {post.readTime}
+            </span>
           </div>
-          <span className="text-[#042718]/60 font-inter text-xs">{post.date}</span>
+          <h3 className="text-[#042718] font-onest text-lg lg:text-xl font-semibold leading-tight tracking-[-0.4px] mb-2 group-hover:text-[#198F38] transition-colors flex-1">
+            {post.title}
+          </h3>
+          <p className="text-[#042718] font-inter text-sm font-normal leading-relaxed opacity-70 mb-5 line-clamp-2">
+            {post.excerpt}
+          </p>
+          <div className="flex items-center justify-between pt-4 border-t border-[#042718]/[0.06] mt-auto">
+            <div className="flex items-center gap-2">
+              <img src={post.authorAvatar} alt={post.author} className="w-7 h-7 rounded-full object-cover" />
+              <span className="text-[#042718] font-onest text-xs font-semibold">{post.author}</span>
+            </div>
+            <span className="text-[#042718]/60 font-inter text-xs">{post.date}</span>
+          </div>
         </div>
-      </div>
+      </Link>
     </motion.article>
   );
 }

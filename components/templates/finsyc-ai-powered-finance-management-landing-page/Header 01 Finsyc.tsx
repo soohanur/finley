@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
+import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowUpRight, Sparkles } from "lucide-react";
 import Navbar from "@/components/Navbar";
@@ -94,7 +95,7 @@ export default function FinleyHeader({ className }: { className?: string }) {
             </motion.p>
 
             {/* CTA Button */}
-            <motion.button
+            <motion.div
               initial={{ y: 20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.85, duration: 0.7, ease: "easeOut" as const }}
@@ -106,6 +107,7 @@ export default function FinleyHeader({ className }: { className?: string }) {
                 (isCTAHovered ? "flex-row-reverse pl-2 pr-5" : "flex-row pl-5 pr-2")
               }
             >
+              <Link href="/get-started" className="contents">
               <motion.span
                 layout
                 className="font-inter text-[15px] sm:text-base lg:text-[17px] xl:text-[18px] font-medium leading-[24px] sm:leading-[28px] text-white"
@@ -126,7 +128,8 @@ export default function FinleyHeader({ className }: { className?: string }) {
                   <ArrowUpRight className="w-4 h-4 text-[#042718]" />
                 </motion.div>
               </motion.div>
-            </motion.button>
+              </Link>
+            </motion.div>
           </div>
 
           {/* Bottom Branding Section - compact, lives in flex layout */}

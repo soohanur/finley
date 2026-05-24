@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
+import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowUpRight, Sparkles, Check } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -89,7 +90,7 @@ export default function CTA01Finsyc({ className }: { className?: string }) {
               Join 18,000+ users who let Finsyc handle the boring parts of money management — so they can focus on growth.
             </motion.p>
 
-            <motion.button
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -102,6 +103,7 @@ export default function CTA01Finsyc({ className }: { className?: string }) {
                 isHovered ? "flex-row-reverse pl-2 pr-5" : "flex-row pl-5 pr-2"
               )}
             >
+              <Link href="/get-started" className="contents">
               <motion.span
                 layout
                 className="font-inter text-[13px] sm:text-base lg:text-[18px] font-medium leading-[24px] sm:leading-[28px] text-[#042718]"
@@ -123,7 +125,8 @@ export default function CTA01Finsyc({ className }: { className?: string }) {
                   <ArrowUpRight className="w-4 h-4 text-white" />
                 </motion.div>
               </motion.div>
-            </motion.button>
+              </Link>
+            </motion.div>
 
             <motion.div
               initial={{ opacity: 0, y: 10 }}
