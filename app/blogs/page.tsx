@@ -4,7 +4,7 @@ import CTA from "@/components/templates/finsyc-ai-powered-finance-management-lan
 import Footer from "@/components/templates/finsyc-ai-powered-finance-management-landing-page/Footer 01 Finsyc";
 
 export const metadata = {
-  title: "Blog — Finley",
+  title: "Blog | Finley",
   description: "Money insights, product news, engineering deep-dives, and honest stories from the Finley team.",
 };
 
@@ -22,7 +22,7 @@ export default function BlogsPage() {
             about money
           </>
         }
-        subtitle="Long-form thinking from the people building Finley — product changes, engineering tradeoffs, and money tips that actually move the needle."
+        subtitle="Long-form thinking from the people building Finley, product changes, engineering tradeoffs, and money tips that actually move the needle."
       />
       <BlogGrid />
       <CTA />

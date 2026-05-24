@@ -23,7 +23,7 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "Finley — AI-Powered Finance Management",
+  title: "Finley | AI-Powered Finance Management",
   description: "Control your money with AI-powered insights. Track spending, predict expenses, and make smarter financial decisions.",
 };
 

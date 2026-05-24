@@ -2,7 +2,7 @@ import Signup from "@/components/templates/finsyc-ai-powered-finance-management-
 import Footer from "@/components/templates/finsyc-ai-powered-finance-management-landing-page/Footer 01 Finsyc";
 
 export const metadata = {
-  title: "Get Started — Finley",
+  title: "Get Started | Finley",
   description: "Create your Finley account. Free 14-day trial, no credit card required.",
 };
 

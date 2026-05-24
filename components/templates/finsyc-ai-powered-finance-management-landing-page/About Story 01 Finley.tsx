@@ -63,7 +63,7 @@ export default function AboutStory({ className }: { className?: string }) {
               transition={{ delay: 0.25 }}
               className="mt-4 sm:mt-5 text-[#042718] font-inter text-sm sm:text-base lg:text-[18px] font-normal leading-[1.55] sm:leading-relaxed opacity-80 max-w-[480px]"
             >
-              Finley started in 2022 around a kitchen table. Three engineers were tired of spreadsheets that lied and banking apps that hid the truth. We built the tool we wished existed — then thousands of people asked for the same thing.
+              Finley started in 2022 around a kitchen table. Three engineers were tired of spreadsheets that lied and banking apps that hid the truth. We built the tool we wished existed, then thousands of people asked for the same thing.
             </motion.p>
           </div>
 

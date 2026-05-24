@@ -88,7 +88,7 @@ export default function Team01Finley({ className }: { className?: string }) {
             transition={{ delay: 0.25 }}
             className="mt-3 sm:mt-4 text-[#042718] font-inter text-sm sm:text-base md:text-lg font-normal leading-[1.5] sm:leading-relaxed opacity-80 max-w-[560px] px-2 sm:px-0"
           >
-            Engineers, designers, and finance veterans from Stripe, Notion, Plaid, and Goldman — united by one boring mission: make money less stressful.
+            Engineers, designers, and finance veterans from Stripe, Notion, Plaid, and Goldman, united by one boring mission: make money less stressful.
           </motion.p>
         </div>
 

@@ -6,7 +6,7 @@ import CTA from "@/components/templates/finsyc-ai-powered-finance-management-lan
 import Footer from "@/components/templates/finsyc-ai-powered-finance-management-landing-page/Footer 01 Finsyc";
 
 export const metadata = {
-  title: "About — Finley",
+  title: "About | Finley",
   description: "Meet the team rebuilding money management from the ground up. Our story, values, and people.",
 };
 

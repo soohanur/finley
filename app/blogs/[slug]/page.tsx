@@ -11,9 +11,9 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const post = getPost(slug);
-  if (!post) return { title: "Article not found — Finley" };
+  if (!post) return { title: "Article not found | Finley" };
   return {
-    title: post.title + " — Finley",
+    title: post.title + " | Finley",
     description: post.excerpt,
   };
 }

@@ -7,7 +7,7 @@ import CTA from "@/components/templates/finsyc-ai-powered-finance-management-lan
 import Footer from "@/components/templates/finsyc-ai-powered-finance-management-landing-page/Footer 01 Finsyc";
 
 export const metadata = {
-  title: "Features — Finley",
+  title: "Features | Finley",
   description: "Explore every Finley feature: smart expense tracking, predictive analytics, security by design, instant transfers.",
 };
 

@@ -28,7 +28,7 @@ const plans: PlanOption[] = [
     id: "pro",
     name: "Pro",
     price: "$15/mo",
-    blurb: "Most popular — 14-day trial",
+    blurb: "Most popular, 14-day trial",
     features: ["Unlimited accounts", "AI predictive analytics", "Smart alerts", "Priority support"],
     recommended: true,
   },

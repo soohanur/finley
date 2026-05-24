@@ -87,7 +87,7 @@ export default function CTA01Finsyc({ className }: { className?: string }) {
               transition={{ delay: 0.3 }}
               className="mt-4 sm:mt-5 text-white/80 font-inter text-sm sm:text-base md:text-lg lg:text-[20px] font-normal leading-[1.5] sm:leading-relaxed max-w-[560px]"
             >
-              Join 18,000+ users who let Finsyc handle the boring parts of money management — so they can focus on growth.
+              Join 18,000+ users who let Finsyc handle the boring parts of money management, so they can focus on growth.
             </motion.p>
 
             <motion.div

@@ -132,7 +132,7 @@ export default function FAQ01Finsyc({ className }: { className?: string }) {
               transition={{ delay: 0.25 }}
               className="mt-3 sm:mt-4 text-[#042718] font-inter text-sm sm:text-base md:text-lg font-normal leading-[1.5] sm:leading-relaxed opacity-80 max-w-[380px]"
             >
-              Still curious? Can&rsquo;t find the answer? Reach our team — average reply time under 2 hours.
+              Still curious? Can&rsquo;t find the answer? Reach our team, average reply time under 2 hours.
             </motion.p>
           </div>
 

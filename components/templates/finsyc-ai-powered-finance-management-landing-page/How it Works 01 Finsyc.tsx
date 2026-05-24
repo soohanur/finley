@@ -30,7 +30,7 @@ const steps: ProcessStep[] = [
     label: "Connect your account",
     icon: Wallet,
     heading: "Connect Your Accounts",
-    subheading: "Securely link your bank accounts, cards, and wallets in seconds — and get a complete, real-time view of your finances in one place.",
+    subheading: "Securely link your bank accounts, cards, and wallets in seconds, and get a complete, real-time view of your finances in one place.",
     list: [
       "Seamless and secure account integration",
       "Supports multiple banks and cards",

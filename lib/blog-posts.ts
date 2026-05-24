@@ -27,17 +27,17 @@ export const posts: BlogPost[] = [
     cover: "https://images.unsplash.com/photo-1620287341056-49a2f1ab2fdc?w=1600&q=80",
     featured: true,
     body: [
-      { type: "p", text: "For most people, the scariest part of personal finance isn't the math — it's the unknown. You know roughly what's coming in, you know roughly what's going out, but the surprise utility bill, the annual subscription renewal, the tax estimate you forgot — those are what wreck the month." },
+      { type: "p", text: "For most people, the scariest part of personal finance isn't the math, it's the unknown. You know roughly what's coming in, you know roughly what's going out, but the surprise utility bill, the annual subscription renewal, the tax estimate you forgot, those are what wreck the month." },
       { type: "p", text: "Predictive cash flow is the feature we've been quietly building for the last eighteen months. Today it's live for every Pro and Business customer." },
       { type: "h2", text: "What it actually does" },
       { type: "p", text: "After 60 days of transaction history, Finley builds a per-account model of your recurring inflows and outflows. It accounts for seasonality, paydays that fall on weekends, and the long-tail of subscriptions that don't fit a clean monthly cadence." },
       { type: "ul", text: "", items: ["Forecasts daily balance up to 90 days out", "Flags upcoming bills before the auto-debit hits", "Highlights weeks where projected outflow exceeds inflow", "Suggests buffer transfers between accounts"] },
       { type: "h2", text: "Why we built it" },
-      { type: "p", text: "We surveyed 2,400 active users in February. The single most common request — across solopreneurs, families, and small business owners — was \"tell me what's coming.\" Existing tools all rear-view. We wanted to look forward." },
+      { type: "p", text: "We surveyed 2,400 active users in February. The single most common request, across solopreneurs, families, and small business owners, was \"tell me what's coming.\" Existing tools all rear-view. We wanted to look forward." },
       { type: "quote", text: "The first time it warned me about a hosting renewal three weeks out, I moved $200 around and never thought about it again. That's the whole point." },
       { type: "h2", text: "How accurate is it?" },
       { type: "p", text: "In our beta cohort of 1,200 accounts, the 30-day balance forecast was within 8% of actual for 92% of users after 60 days of history. After 90 days, that climbs to 96%. The model improves with more data and better tagging." },
-      { type: "p", text: "Open the Forecast tab on your dashboard to see your numbers. We'd love to hear how it lands — replies to feedback@finley.app go straight to the product team." }
+      { type: "p", text: "Open the Forecast tab on your dashboard to see your numbers. We'd love to hear how it lands, replies to feedback@finley.app go straight to the product team." }
     ]
   },
   {
@@ -52,7 +52,7 @@ export const posts: BlogPost[] = [
     date: "May 8, 2026",
     cover: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=1600&q=80",
     body: [
-      { type: "p", text: "When a customer connects a new account to Finley, they expect transactions to appear within seconds — not minutes. Hitting that bar across 12,000 banks, each with its own API quirks, rate limits, and downtime windows, took us two years and a lot of unglamorous engineering." },
+      { type: "p", text: "When a customer connects a new account to Finley, they expect transactions to appear within seconds, not minutes. Hitting that bar across 12,000 banks, each with its own API quirks, rate limits, and downtime windows, took us two years and a lot of unglamorous engineering." },
       { type: "h2", text: "The three pillars" },
       { type: "p", text: "Our ingestion stack stands on three boring choices: an event-driven core, lock-free queues, and aggressive caching of intermediate state. None of these are novel. The win was in disciplined application." },
       { type: "ul", text: "", items: ["Kafka topics per bank cluster, partitioned by customer hash", "Goroutine pool with bounded concurrency per institution", "Redis-backed dedup window with 5-minute TTL", "Postgres logical replication for downstream consumers"] },
@@ -91,7 +91,7 @@ export const posts: BlogPost[] = [
     date: "Apr 22, 2026",
     cover: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=1600&q=80",
     body: [
-      { type: "p", text: "We pulled anonymized recurring-charge data from 50,000 opted-in customers across the US, UK, and EU. The big surprise wasn't the expensive subscriptions — those people notice. It was the small ones that quietly pile up." },
+      { type: "p", text: "We pulled anonymized recurring-charge data from 50,000 opted-in customers across the US, UK, and EU. The big surprise wasn't the expensive subscriptions, those people notice. It was the small ones that quietly pile up." },
       { type: "h2", text: "The five biggest offenders" },
       { type: "ul", text: "", items: ["Cloud storage tiers (avg $48/yr unused)", "Free trial that auto-converted ($83/yr median)", "Duplicate streaming with overlapping households ($112/yr)", "Phone insurance bundled with old carrier ($96/yr)", "Donation pledges no one remembered setting up ($64/yr)"] }
     ]
@@ -140,7 +140,7 @@ export const posts: BlogPost[] = [
     date: "Mar 25, 2026",
     cover: "https://images.unsplash.com/photo-1579621970795-87facc2f976d?w=1600&q=80",
     body: [
-      { type: "p", text: "The classic 50/30/20 rule (needs/wants/savings) made sense in the 1980s when housing was a smaller share of take-home pay. For most working professionals today, 50% on needs isn't a budget — it's a fantasy." },
+      { type: "p", text: "The classic 50/30/20 rule (needs/wants/savings) made sense in the 1980s when housing was a smaller share of take-home pay. For most working professionals today, 50% on needs isn't a budget, it's a fantasy." },
       { type: "h2", text: "Why 60/20/20 fits better" },
       { type: "p", text: "Acknowledging that fixed costs eat 60% lets you build a realistic discretionary envelope and protect savings without lying to yourself." }
     ]

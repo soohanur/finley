@@ -44,7 +44,7 @@ const testimonials: Testimonial[] = [
     role: "CEO, Catalyst Group",
     avatar: "https://i.pravatar.cc/120?img=68",
     rating: 5,
-    quote: "Bank-grade security plus a UI that actually feels good. Rare combination — Finley nailed it.",
+    quote: "Bank-grade security plus a UI that actually feels good. Rare combination | Finley nailed it.",
     brandLogo: "https://cdn.jiro.build/Amox/All%20SVG/Catalyst.svg"
   },
   {
@@ -150,7 +150,7 @@ export default function Testimonials01Finsyc({ className }: { className?: string
             transition={{ delay: 0.25 }}
             className="mt-3 sm:mt-4 text-[#042718] font-inter text-sm sm:text-base md:text-lg font-normal leading-[1.5] sm:leading-relaxed opacity-80 max-w-[560px] px-2 sm:px-0"
           >
-            From scrappy startups to enterprise CFOs — hear why Finley is the financial backbone of modern teams.
+            From scrappy startups to enterprise CFOs, hear why Finley is the financial backbone of modern teams.
           </motion.p>
         </div>
 

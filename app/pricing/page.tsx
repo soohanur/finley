@@ -6,7 +6,7 @@ import CTA from "@/components/templates/finsyc-ai-powered-finance-management-lan
 import Footer from "@/components/templates/finsyc-ai-powered-finance-management-landing-page/Footer 01 Finsyc";
 
 export const metadata = {
-  title: "Pricing — Finley",
+  title: "Pricing | Finley",
   description: "Simple, transparent pricing. Plans for individuals, teams, and growing businesses.",
 };
 

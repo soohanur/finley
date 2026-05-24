@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import { motion, animate } from "framer-motion";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, Briefcase, Activity, Mountain } from "lucide-react";
 
 function Counter({ value, duration = 2 }: { value: number; duration?: number }) {
   const [displayValue, setDisplayValue] = useState(0);
@@ -47,15 +47,8 @@ function FeatureCard({
       style={{ backgroundColor: bgColor }}
       className="flex w-full lg:w-[400px] p-6 md:p-8 flex-col items-start rounded-[24px]"
     >
-      <div className="flex items-center gap-[12px] mb-[20px]">
-        <div
-          className="h-[36px] flex items-center"
-          style={{
-            filter: "brightness(0) saturate(100%) invert(11%) sepia(21%) saturate(2304%) hue-rotate(111deg) brightness(91%) contrast(100%)",
-          } as React.CSSProperties}
-        >
-          {logo}
-        </div>
+      <div className="flex items-center gap-[10px] mb-[20px]">
+        {logo}
       </div>
 
       <p className="font-sans text-[16px] md:text-[18px] font-medium leading-[24px] md:leading-[28px] text-[#042718] opacity-80 min-h-0 md:min-h-[112px]">
@@ -93,7 +86,7 @@ export default function MetricsWithLogo01Finsyc({ className }: { className?: str
                 transition={{ duration: 0.8, ease: "easeOut" as const }}
                 className="max-w-[584px] text-[26px] xs:text-[28px] sm:text-[36px] md:text-[44px] lg:text-[52px] font-heading font-semibold leading-[1.1] md:leading-[58px] tracking-[-0.8px] sm:tracking-[-1.2px] md:tracking-[-1.8px] text-[#042718]"
               >
-                Smarter financial setup for scaling <i className="text-[rgba(0,0,0,0.40)]">growth</i>
+                Built for teams ready to scale with <i className="text-[rgba(0,0,0,0.40)]">confidence</i>
               </motion.h1>
 
               <motion.button
@@ -139,50 +132,50 @@ export default function MetricsWithLogo01Finsyc({ className }: { className?: str
               <FeatureCard
                 delay={0.1}
                 bgColor="#D2DDEA"
-                brandName="Lumassa"
+                brandName="Halcyon"
                 logo={
-                  <img
-                    src="https://cdn.jiro.build/Amox/All%20SVG/Lumassa.svg"
-                    alt="Lumassa"
-                    className="h-[36px] w-auto"
-                    referrerPolicy="no-referrer"
-                  />
+                  <div className="flex items-center gap-2 text-[#042718]">
+                    <Briefcase className="w-[28px] h-[28px]" strokeWidth={2.4} />
+                    <span className="font-heading text-[22px] sm:text-[24px] font-semibold tracking-[-0.4px]">
+                      Halcyon
+                    </span>
+                  </div>
                 }
-                description="Advanced infrastructure to automate transactions, streamline operations, and scale your financial services with confidence."
+                description="Reliable infrastructure that automates your transactions and helps your team scale services with quiet confidence."
                 percentage={42}
-                statLabel="Increase in financial efficiency per year"
+                statLabel="Lift in financial efficiency each year"
               />
               <FeatureCard
                 delay={0.2}
                 bgColor="#EBE3D2"
-                brandName="Catalyst"
+                brandName="Pulse"
                 logo={
-                  <img
-                    src="https://cdn.jiro.build/Amox/All%20SVG/Catalyst.svg"
-                    alt="Catalyst"
-                    className="h-[36px] w-auto"
-                    referrerPolicy="no-referrer"
-                  />
+                  <div className="flex items-center gap-2 text-[#042718]">
+                    <Activity className="w-[28px] h-[28px]" strokeWidth={2.4} />
+                    <span className="font-heading text-[22px] sm:text-[24px] font-semibold tracking-[-0.4px]">
+                      Pulse
+                    </span>
+                  </div>
                 }
-                description="Real-time payment processing, intelligent routing, and seamless integrations to accelerate your business growth."
+                description="Lightning fast payment routing and clean integrations that turn slow back office work into a daily win."
                 percentage={34}
-                statLabel="Faster transaction processing"
+                statLabel="Faster transaction speeds"
               />
               <FeatureCard
                 delay={0.3}
                 bgColor="#D4E5CD"
-                brandName="Naxus"
+                brandName="Northwind"
                 logo={
-                  <img
-                    src="https://cdn.jiro.build/Amox/All%20SVG/Naxus.svg"
-                    alt="Naxus"
-                    className="h-[36px] w-auto"
-                    referrerPolicy="no-referrer"
-                  />
+                  <div className="flex items-center gap-2 text-[#042718]">
+                    <Mountain className="w-[28px] h-[28px]" strokeWidth={2.4} />
+                    <span className="font-heading text-[22px] sm:text-[24px] font-semibold tracking-[-0.4px]">
+                      Northwind
+                    </span>
+                  </div>
                 }
-                description="Enterprise-grade security, risk management, and compliance tools to protect your customers and your brand."
+                description="Enterprise grade security plus compliance tools that keep your customers safe and your brand trusted."
                 percentage={26}
-                statLabel="Reduction in operational costs"
+                statLabel="Drop in operational costs"
               />
             </div>
           </div>
