@@ -157,11 +157,11 @@ export default function FinleyHeader({ className }: { className?: string }) {
               >
                 {[...Array(2)].map((_: unknown, i: number) => (
                   <React.Fragment key={i}>
-                    <img src="https://cdn.jiro.build/Amox/All%20SVG/Horizon.svg" alt="Horizon" className="h-14 sm:h-16 md:h-20 lg:h-24 xl:h-28 w-auto opacity-95 brightness-0 invert" />
-                    <img src="https://cdn.jiro.build/Amox/All%20SVG/Naxus.svg" alt="Naxus" className="h-14 sm:h-16 md:h-20 lg:h-24 xl:h-28 w-auto opacity-95 brightness-0 invert" />
-                    <img src="https://cdn.jiro.build/Amox/All%20SVG/Lumassa.svg" alt="Lumassa" className="h-14 sm:h-16 md:h-20 lg:h-24 xl:h-28 w-auto opacity-95 brightness-0 invert" />
-                    <img src="https://cdn.jiro.build/Amox/All%20SVG/Cyborg.svg" alt="Cyborg" className="h-14 sm:h-16 md:h-20 lg:h-24 xl:h-28 w-auto opacity-95 brightness-0 invert" />
-                    <img src="https://cdn.jiro.build/Amox/All%20SVG/Catalyst.svg" alt="Catalyst" className="h-14 sm:h-16 md:h-20 lg:h-24 xl:h-28 w-auto opacity-95 brightness-0 invert" />
+                    <img src="https://cdn.jiro.build/Amox/All%20SVG/Horizon.svg" alt="Horizon" className="h-20! sm:h-24! md:h-28! lg:h-32! xl:h-36! w-auto opacity-95 brightness-0 invert" />
+                    <img src="https://cdn.jiro.build/Amox/All%20SVG/Naxus.svg" alt="Naxus" className="h-20! sm:h-24! md:h-28! lg:h-32! xl:h-36! w-auto opacity-95 brightness-0 invert" />
+                    <img src="https://cdn.jiro.build/Amox/All%20SVG/Lumassa.svg" alt="Lumassa" className="h-20! sm:h-24! md:h-28! lg:h-32! xl:h-36! w-auto opacity-95 brightness-0 invert" />
+                    <img src="https://cdn.jiro.build/Amox/All%20SVG/Cyborg.svg" alt="Cyborg" className="h-20! sm:h-24! md:h-28! lg:h-32! xl:h-36! w-auto opacity-95 brightness-0 invert" />
+                    <img src="https://cdn.jiro.build/Amox/All%20SVG/Catalyst.svg" alt="Catalyst" className="h-20! sm:h-24! md:h-28! lg:h-32! xl:h-36! w-auto opacity-95 brightness-0 invert" />
                   </React.Fragment>
                 ))}
               </motion.div>

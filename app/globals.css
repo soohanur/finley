@@ -36,10 +36,6 @@ body {
   min-width: 0;
 }
 
-img {
-  max-width: 100%;
-}
-
 .scrollbar-hide {
   -ms-overflow-style: none;
   scrollbar-width: none;
