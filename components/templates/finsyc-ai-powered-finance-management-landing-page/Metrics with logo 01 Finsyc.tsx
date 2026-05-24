@@ -63,7 +63,7 @@ function FeatureCard({
       </p>
 
       <div className="mt-12 md:mt-[80px]">
-        <h2 className="font-heading text-[40px] md:text-[52px] font-semibold leading-[46px] md:leading-[58px] tracking-[-1.2px] md:tracking-[-1.8px] text-[#042718]">
+        <h2 className="font-heading text-[32px] sm:text-[40px] md:text-[52px] font-semibold leading-[1.1] md:leading-[58px] tracking-[-1px] sm:tracking-[-1.2px] md:tracking-[-1.8px] text-[#042718]">
           <Counter value={percentage} />
         </h2>
         <p className="mt-[12px] md:mt-[16px] font-sans text-[16px] md:text-[18px] font-normal leading-[24px] md:leading-[28px] text-[#042718] opacity-80">
@@ -80,9 +80,9 @@ export default function MetricsWithLogo01Finsyc({ className }: { className?: str
   return (
     <>
       <section
-        className={"w-full bg-[#F6FDFF] py-20 lg:py-32 flex justify-center " + (className || "")}
+        className={"w-full bg-[#F6FDFF] py-14 sm:py-20 lg:py-32 flex justify-center " + (className || "")}
       >
-        <div className="w-full max-w-[1440px] px-6 lg:px-[96px]">
+        <div className="w-full max-w-[1440px] px-4 sm:px-6 lg:px-[96px]">
           <div className="w-full max-w-[1248px] mx-auto">
             {/* Header Row */}
             <div className="flex flex-col md:flex-row md:justify-between md:items-end mb-10 md:mb-[64px] gap-8">
@@ -91,7 +91,7 @@ export default function MetricsWithLogo01Finsyc({ className }: { className?: str
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, ease: "easeOut" as const }}
-                className="max-w-[584px] text-[36px] md:text-[52px] font-heading font-semibold leading-[42px] md:leading-[58px] tracking-[-1.2px] md:tracking-[-1.8px] text-[#042718]"
+                className="max-w-[584px] text-[26px] xs:text-[28px] sm:text-[36px] md:text-[44px] lg:text-[52px] font-heading font-semibold leading-[1.1] md:leading-[58px] tracking-[-0.8px] sm:tracking-[-1.2px] md:tracking-[-1.8px] text-[#042718]"
               >
                 Smarter financial setup for scaling <i className="text-[rgba(0,0,0,0.40)]">growth</i>
               </motion.h1>

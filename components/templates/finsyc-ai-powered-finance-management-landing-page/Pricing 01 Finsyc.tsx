@@ -81,7 +81,7 @@ function PlanCard({ plan, isYearly, delay }: { plan: Plan; isYearly: boolean; de
     >
       <div className="flex items-center justify-between mb-2">
         <h3 className={cn(
-          "font-onest text-[22px] md:text-[26px] font-semibold tracking-[-0.6px]",
+          "font-onest text-[20px] sm:text-[22px] md:text-[26px] font-semibold tracking-[-0.5px] md:tracking-[-0.6px]",
           highlighted ? "text-white" : "text-[#042718]"
         )}>
           {plan.name}
@@ -102,7 +102,7 @@ function PlanCard({ plan, isYearly, delay }: { plan: Plan; isYearly: boolean; de
 
       <div className="flex items-baseline gap-2 mb-8">
         <span className={cn(
-          "font-onest text-[44px] md:text-[56px] font-semibold leading-none tracking-[-1.8px]",
+          "font-onest text-[38px] sm:text-[44px] md:text-[56px] font-semibold leading-none tracking-[-1.4px] md:tracking-[-1.8px]",
           highlighted ? "text-white" : "text-[#042718]"
         )}>
           ${price}
@@ -161,7 +161,7 @@ export default function Pricing01Finsyc({ className }: { className?: string }) {
   const [isYearly, setIsYearly] = useState(true);
 
   return (
-    <section className={cn("w-full bg-white py-20 lg:py-32", className)}>
+    <section className={cn("w-full bg-white py-14 sm:py-20 lg:py-32", className)}>
       <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col items-center text-center mb-12 lg:mb-16">
           <motion.div
@@ -181,7 +181,7 @@ export default function Pricing01Finsyc({ className }: { className?: string }) {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.15 }}
-            className="text-[#042718] font-onest text-[32px] sm:text-[44px] lg:text-[52px] font-semibold leading-tight lg:leading-[58px] tracking-[-1.2px] lg:tracking-[-1.8px] max-w-[720px]"
+            className="text-[#042718] font-onest text-[26px] xs:text-[28px] sm:text-[36px] md:text-[44px] lg:text-[52px] font-semibold leading-[1.1] lg:leading-[58px] tracking-[-0.8px] sm:tracking-[-1.2px] lg:tracking-[-1.8px] max-w-[720px] px-2 sm:px-0"
           >
             Plans that{" "}
             <span className="font-playfair italic font-semibold text-black/40">
@@ -195,7 +195,7 @@ export default function Pricing01Finsyc({ className }: { className?: string }) {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.25 }}
-            className="mt-4 text-[#042718] font-inter text-base sm:text-lg font-normal leading-relaxed opacity-80 max-w-[520px]"
+            className="mt-3 sm:mt-4 text-[#042718] font-inter text-sm sm:text-base lg:text-lg font-normal leading-[1.5] sm:leading-relaxed opacity-80 max-w-[520px] px-2 sm:px-0"
           >
             No hidden fees. Cancel anytime. Switch plans as your needs change.
           </motion.p>

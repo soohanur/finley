@@ -52,11 +52,11 @@ export default function Navbar({ variant = "transparent" }: { variant?: "transpa
           variant === "solid" && "bg-white border-b border-[#042718]/[0.06]"
         )}
       >
-        <Link href="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
-          <div className="w-8 h-8 rounded-lg bg-[#042718] flex items-center justify-center">
-            <span className="font-onest text-white text-lg font-bold leading-none">F</span>
+        <Link href="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity shrink-0">
+          <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-lg bg-[#042718] flex items-center justify-center">
+            <span className="font-onest text-white text-base sm:text-lg font-bold leading-none">F</span>
           </div>
-          <span className="font-onest text-xl sm:text-2xl font-semibold text-[#042718] tracking-tight">
+          <span className="font-onest text-lg sm:text-2xl font-semibold text-[#042718] tracking-tight">
             Finley
           </span>
         </Link>

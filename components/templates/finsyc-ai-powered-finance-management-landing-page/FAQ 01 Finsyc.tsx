@@ -57,16 +57,16 @@ function FAQRow({ item, isOpen, onToggle, delay }: { item: FAQItem; isOpen: bool
     >
       <button
         onClick={onToggle}
-        className="w-full flex items-center justify-between gap-6 p-5 md:p-6 text-left"
+        className="w-full flex items-center justify-between gap-4 sm:gap-6 p-4 sm:p-5 md:p-6 text-left"
       >
-        <span className="text-[#042718] font-onest text-base md:text-[18px] font-semibold leading-tight tracking-[-0.3px] flex-1">
+        <span className="text-[#042718] font-onest text-sm sm:text-base md:text-[18px] font-semibold leading-[1.3] tracking-[-0.3px] flex-1">
           {item.q}
         </span>
         <div className={cn(
-          "w-9 h-9 rounded-full flex items-center justify-center shrink-0 transition-colors",
+          "w-8 h-8 sm:w-9 sm:h-9 rounded-full flex items-center justify-center shrink-0 transition-colors",
           isOpen ? "bg-[#198F38] text-white" : "bg-[#F6FDFF] text-[#042718]"
         )}>
-          {isOpen ? <Minus className="w-4 h-4" /> : <Plus className="w-4 h-4" />}
+          {isOpen ? <Minus className="w-3.5 h-3.5 sm:w-4 sm:h-4" /> : <Plus className="w-3.5 h-3.5 sm:w-4 sm:h-4" />}
         </div>
       </button>
 
@@ -79,8 +79,8 @@ function FAQRow({ item, isOpen, onToggle, delay }: { item: FAQItem; isOpen: bool
             transition={{ duration: 0.3, ease: "easeInOut" as const }}
             className="overflow-hidden"
           >
-            <div className="px-5 md:px-6 pb-5 md:pb-6">
-              <p className="text-[#042718] font-inter text-base font-normal leading-relaxed opacity-80">
+            <div className="px-4 sm:px-5 md:px-6 pb-4 sm:pb-5 md:pb-6">
+              <p className="text-[#042718] font-inter text-sm sm:text-base font-normal leading-[1.55] sm:leading-relaxed opacity-80">
                 {item.a}
               </p>
             </div>
@@ -95,7 +95,7 @@ export default function FAQ01Finsyc({ className }: { className?: string }) {
   const [openIdx, setOpenIdx] = useState<number | null>(0);
 
   return (
-    <section className={cn("w-full bg-[#F6FDFF] py-20 lg:py-32", className)}>
+    <section className={cn("w-full bg-[#F6FDFF] py-14 sm:py-20 lg:py-32", className)}>
       <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-[420px_1fr] gap-12 lg:gap-20">
 
@@ -117,7 +117,7 @@ export default function FAQ01Finsyc({ className }: { className?: string }) {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.15 }}
-              className="text-[#042718] font-onest text-[32px] sm:text-[44px] lg:text-[52px] font-semibold leading-tight lg:leading-[58px] tracking-[-1.2px] lg:tracking-[-1.8px]"
+              className="text-[#042718] font-onest text-[26px] xs:text-[28px] sm:text-[36px] md:text-[44px] lg:text-[52px] font-semibold leading-[1.1] lg:leading-[58px] tracking-[-0.8px] sm:tracking-[-1.2px] lg:tracking-[-1.8px]"
             >
               Questions{" "}
               <span className="font-playfair italic font-semibold text-black/40">
@@ -130,7 +130,7 @@ export default function FAQ01Finsyc({ className }: { className?: string }) {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.25 }}
-              className="mt-4 text-[#042718] font-inter text-base sm:text-lg font-normal leading-relaxed opacity-80 max-w-[380px]"
+              className="mt-3 sm:mt-4 text-[#042718] font-inter text-sm sm:text-base md:text-lg font-normal leading-[1.5] sm:leading-relaxed opacity-80 max-w-[380px]"
             >
               Still curious? Can&rsquo;t find the answer? Reach our team — average reply time under 2 hours.
             </motion.p>

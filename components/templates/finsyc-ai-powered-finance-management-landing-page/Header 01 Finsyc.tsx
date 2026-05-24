@@ -24,7 +24,7 @@ export default function FinleyHeader({ className }: { className?: string }) {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1, ease: "easeOut" as const }}
-        className={"relative w-full overflow-hidden min-h-screen flex flex-col " + (className || "")}
+        className={"relative w-full overflow-hidden min-h-[100svh] flex flex-col " + (className || "")}
       >
         {/* Background Video */}
         <div className="absolute inset-0 z-0">
@@ -56,15 +56,15 @@ export default function FinleyHeader({ className }: { className?: string }) {
               initial={{ y: 20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.4, duration: 0.7, ease: "easeOut" as const }}
-              className="flex items-center gap-1.5 sm:gap-2 px-3 sm:px-[14px] py-1.5 rounded-full bg-white/10 backdrop-blur-sm border border-white/40 mb-4 sm:mb-5 lg:mb-6 whitespace-nowrap"
+              className="flex items-center gap-1.5 sm:gap-2 px-2.5 sm:px-[14px] py-1 sm:py-1.5 rounded-full bg-white/10 backdrop-blur-sm border border-white/40 mb-3 sm:mb-5 lg:mb-6 whitespace-nowrap max-w-[calc(100vw-2rem)]"
             >
               <div className="flex items-center gap-1 shrink-0">
-                <Sparkles className="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-[#042718] text-[#042718]" />
-                <span className="font-inter text-xs sm:text-sm lg:text-base xl:text-[18px] font-medium leading-[28px] text-[#042718]">
+                <Sparkles className="w-3 h-3 sm:w-4 sm:h-4 fill-[#042718] text-[#042718]" />
+                <span className="font-inter text-[11px] sm:text-sm lg:text-base xl:text-[18px] font-medium leading-[20px] sm:leading-[28px] text-[#042718]">
                   4.9 rating
                 </span>
               </div>
-              <span className="font-inter text-xs sm:text-sm lg:text-base xl:text-[18px] font-normal leading-[28px] text-black opacity-60 shrink-0">
+              <span className="font-inter text-[11px] sm:text-sm lg:text-base xl:text-[18px] font-normal leading-[20px] sm:leading-[28px] text-black opacity-60 shrink-0">
                 from 18.3k+ users
               </span>
             </motion.div>
@@ -74,7 +74,7 @@ export default function FinleyHeader({ className }: { className?: string }) {
               initial={{ y: 30, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.55, duration: 0.7, ease: "easeOut" as const }}
-              className="max-w-[750px] w-full text-center font-onest font-semibold leading-[1.05] tracking-tight text-[#042718] text-[30px] sm:text-[38px] md:text-[44px] lg:text-[44px] xl:text-[56px] 2xl:text-[66px] lg:tracking-[-2px] xl:tracking-[-2.5px] 2xl:tracking-[-3px]"
+              className="max-w-[750px] w-full text-center font-onest font-semibold leading-[1.08] sm:leading-[1.05] tracking-tight text-[#042718] text-[26px] xs:text-[28px] sm:text-[38px] md:text-[44px] lg:text-[44px] xl:text-[56px] 2xl:text-[66px] lg:tracking-[-2px] xl:tracking-[-2.5px] 2xl:tracking-[-3px] px-2 sm:px-0"
             >
               Control Your Money with{" "}
               <span className="font-playfair italic font-semibold text-black opacity-50 tracking-normal">
@@ -88,7 +88,7 @@ export default function FinleyHeader({ className }: { className?: string }) {
               initial={{ y: 20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.7, duration: 0.7, ease: "easeOut" as const }}
-              className="max-w-[630px] w-full text-center mt-3 sm:mt-4 lg:mt-5 font-inter font-normal tracking-[-0.3px] text-[#042718] text-sm sm:text-base lg:text-[17px] xl:text-[20px] leading-relaxed lg:leading-[1.55]"
+              className="max-w-[630px] w-full text-center mt-3 sm:mt-4 lg:mt-5 font-inter font-normal tracking-[-0.3px] text-[#042718] text-[13px] sm:text-base lg:text-[17px] xl:text-[20px] leading-[1.5] lg:leading-[1.55] px-2 sm:px-0"
             >
               Automatically track your spending, predict upcoming expenses, and make smarter financial decisions without lifting a finger.
             </motion.p>
@@ -102,19 +102,19 @@ export default function FinleyHeader({ className }: { className?: string }) {
               onMouseLeave={() => setIsCTAHovered(false)}
               layout
               className={
-                "flex items-center gap-3 py-2 rounded-full bg-[#042718] mt-6 sm:mt-7 lg:mt-8 xl:mt-10 group cursor-pointer relative h-12 sm:h-13 lg:h-14 border border-white/20 transition-all duration-300 " +
+                "flex items-center gap-2 sm:gap-3 py-1.5 sm:py-2 rounded-full bg-[#042718] mt-5 sm:mt-7 lg:mt-8 xl:mt-10 group cursor-pointer relative h-11 sm:h-12 lg:h-14 border border-white/20 transition-all duration-300 " +
                 (isCTAHovered ? "flex-row-reverse pl-2 pr-5" : "flex-row pl-5 pr-2")
               }
             >
               <motion.span
                 layout
-                className="font-inter text-sm sm:text-base lg:text-[17px] xl:text-[18px] font-medium leading-[28px] text-white"
+                className="font-inter text-[13px] sm:text-base lg:text-[17px] xl:text-[18px] font-medium leading-[24px] sm:leading-[28px] text-white"
               >
                 Get 14-days free trial
               </motion.span>
               <motion.div
                 layout
-                className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white flex items-center justify-center relative overflow-hidden shrink-0"
+                className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-white flex items-center justify-center relative overflow-hidden shrink-0"
               >
                 <motion.div
                   animate={{
@@ -134,11 +134,12 @@ export default function FinleyHeader({ className }: { className?: string }) {
             initial={{ y: 30, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 1, duration: 0.8, ease: "easeOut" as const }}
-            className="flex flex-col items-center gap-3 sm:gap-4 lg:gap-5 w-full pb-5 sm:pb-6 lg:pb-8 flex-shrink-0"
+            className="flex flex-col items-center gap-2.5 sm:gap-4 lg:gap-5 w-full pb-4 sm:pb-6 lg:pb-8 flex-shrink-0"
           >
-            <div className="px-4 py-1 rounded-full bg-white/5 backdrop-blur-sm border border-white/20">
-              <p className="font-inter text-[11px] sm:text-xs lg:text-sm xl:text-base font-medium leading-6 tracking-[-0.3px] text-white text-center">
-                Collaborating with leading fintech innovators worldwide
+            <div className="px-3 sm:px-4 py-1 rounded-full bg-white/5 backdrop-blur-sm border border-white/20 max-w-[calc(100vw-2rem)]">
+              <p className="font-inter text-[10px] sm:text-xs lg:text-sm xl:text-base font-medium leading-5 sm:leading-6 tracking-[-0.3px] text-white text-center">
+                <span className="sm:hidden">Trusted by fintech leaders</span>
+                <span className="hidden sm:inline">Collaborating with leading fintech innovators worldwide</span>
               </p>
             </div>
             <div
@@ -152,15 +153,15 @@ export default function FinleyHeader({ className }: { className?: string }) {
                   ease: "linear" as const,
                   repeat: Infinity as number
                 }}
-                className="flex items-center gap-10 sm:gap-14 lg:gap-20 w-fit"
+                className="flex items-center gap-8 sm:gap-14 lg:gap-20 w-fit"
               >
                 {[...Array(2)].map((_: unknown, i: number) => (
                   <React.Fragment key={i}>
-                    <img src="https://cdn.jiro.build/Amox/All%20SVG/Horizon.svg" alt="Horizon" className="h-5 sm:h-6 lg:h-7 xl:h-8 w-auto opacity-90" />
-                    <img src="https://cdn.jiro.build/Amox/All%20SVG/Naxus.svg" alt="Naxus" className="h-5 sm:h-6 lg:h-7 xl:h-8 w-auto opacity-90" />
-                    <img src="https://cdn.jiro.build/Amox/All%20SVG/Lumassa.svg" alt="Lumassa" className="h-5 sm:h-6 lg:h-7 xl:h-8 w-auto opacity-90" />
-                    <img src="https://cdn.jiro.build/Amox/All%20SVG/Cyborg.svg" alt="Cyborg" className="h-5 sm:h-6 lg:h-7 xl:h-8 w-auto opacity-90" />
-                    <img src="https://cdn.jiro.build/Amox/All%20SVG/Catalyst.svg" alt="Catalyst" className="h-5 sm:h-6 lg:h-7 xl:h-8 w-auto opacity-90" />
+                    <img src="https://cdn.jiro.build/Amox/All%20SVG/Horizon.svg" alt="Horizon" className="h-4 sm:h-6 lg:h-7 xl:h-8 w-auto opacity-90" />
+                    <img src="https://cdn.jiro.build/Amox/All%20SVG/Naxus.svg" alt="Naxus" className="h-4 sm:h-6 lg:h-7 xl:h-8 w-auto opacity-90" />
+                    <img src="https://cdn.jiro.build/Amox/All%20SVG/Lumassa.svg" alt="Lumassa" className="h-4 sm:h-6 lg:h-7 xl:h-8 w-auto opacity-90" />
+                    <img src="https://cdn.jiro.build/Amox/All%20SVG/Cyborg.svg" alt="Cyborg" className="h-4 sm:h-6 lg:h-7 xl:h-8 w-auto opacity-90" />
+                    <img src="https://cdn.jiro.build/Amox/All%20SVG/Catalyst.svg" alt="Catalyst" className="h-4 sm:h-6 lg:h-7 xl:h-8 w-auto opacity-90" />
                   </React.Fragment>
                 ))}
               </motion.div>

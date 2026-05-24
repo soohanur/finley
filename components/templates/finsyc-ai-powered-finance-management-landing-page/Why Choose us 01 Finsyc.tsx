@@ -26,10 +26,10 @@ function BenefitItem({ title, description, icon: Icon, delay = 0 }: BenefitItemP
         <Icon className="w-5 h-5 text-[#138E5F]" strokeWidth={2.5} />
       </div>
       <div className="flex flex-col gap-1">
-        <h3 className="text-[#042718] font-onest text-[20px] md:text-[24px] font-semibold leading-[26px] md:leading-[30px] tracking-[-0.6px] md:tracking-[-0.8px]">
+        <h3 className="text-[#042718] font-onest text-[18px] sm:text-[20px] md:text-[24px] font-semibold leading-[24px] sm:leading-[26px] md:leading-[30px] tracking-[-0.5px] md:tracking-[-0.8px]">
           {title}
         </h3>
-        <p className="text-[#042718] font-sans text-base md:text-[18px] font-normal leading-[24px] md:leading-[28px] opacity-80">
+        <p className="text-[#042718] font-sans text-sm sm:text-base md:text-[18px] font-normal leading-[22px] sm:leading-[24px] md:leading-[28px] opacity-80">
           {description}
         </p>
       </div>
@@ -105,8 +105,8 @@ export default function WhyChooseUs01Finsyc({ className }: { className?: string 
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700&display=swap" rel="stylesheet" crossOrigin="anonymous" />
 
-      <section className={cn("w-full bg-white py-16 md:py-24 lg:py-[120px] flex justify-center", className)}>
-        <div className="w-full max-w-[1440px] px-6 lg:px-[96px]">
+      <section className={cn("w-full bg-white py-14 sm:py-20 md:py-24 lg:py-[120px] flex justify-center", className)}>
+        <div className="w-full max-w-[1440px] px-4 sm:px-6 lg:px-[96px]">
           <div className="w-full max-w-[1248px] mx-auto">
             <div className="flex flex-col lg:flex-row items-start gap-16 lg:gap-[48px] justify-between">
 
@@ -129,7 +129,7 @@ export default function WhyChooseUs01Finsyc({ className }: { className?: string 
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: 0.15 }}
-                  className="text-[#042718] font-onest text-[36px] md:text-[52px] font-semibold leading-tight md:leading-[58px] tracking-[-1.2px] md:tracking-[-1.8px] mb-6"
+                  className="text-[#042718] font-onest text-[26px] xs:text-[28px] sm:text-[36px] md:text-[44px] lg:text-[52px] font-semibold leading-[1.1] md:leading-[58px] tracking-[-0.8px] sm:tracking-[-1.2px] md:tracking-[-1.8px] mb-4 sm:mb-6"
                 >
                   Built for{" "}
                   <span className="font-playfair italic font-semibold text-black/40">
@@ -143,7 +143,7 @@ export default function WhyChooseUs01Finsyc({ className }: { className?: string 
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: 0.25 }}
-                  className="text-[#042718] font-sans text-base md:text-[18px] font-normal leading-relaxed md:leading-[28px] opacity-80 mb-10 max-w-[520px]"
+                  className="text-[#042718] font-sans text-sm sm:text-base md:text-[18px] font-normal leading-[1.55] md:leading-[28px] opacity-80 mb-8 sm:mb-10 max-w-[520px]"
                 >
                   Finley is engineered for clarity, speed, and trust. Every feature is designed to save your time, protect your data, and grow your wealth.
                 </motion.p>
@@ -165,7 +165,7 @@ export default function WhyChooseUs01Finsyc({ className }: { className?: string 
               </div>
 
               {/* Right Column - Scrolling List */}
-              <div className="w-full lg:max-w-[578px] flex flex-col gap-10 md:gap-12">
+              <div className="w-full lg:max-w-[578px] flex flex-col gap-8 md:gap-12">
                 {benefits.map((b, i) => (
                   <BenefitItem
                     key={b.title}

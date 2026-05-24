@@ -72,7 +72,7 @@ function TestimonialCard({ t, delay }: { t: Testimonial; delay: number }) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.6, delay, ease: "easeOut" as const }}
-      className="flex flex-col p-6 md:p-8 bg-white rounded-[24px] border border-[#042718]/[0.06] shadow-[0_1px_20px_0_rgba(4,39,24,0.04)] hover:shadow-[0_4px_30px_0_rgba(4,39,24,0.08)] transition-shadow duration-300 h-full"
+      className="flex flex-col p-5 sm:p-6 md:p-8 bg-white rounded-[20px] sm:rounded-[24px] border border-[#042718]/[0.06] shadow-[0_1px_20px_0_rgba(4,39,24,0.04)] hover:shadow-[0_4px_30px_0_rgba(4,39,24,0.08)] transition-shadow duration-300 h-full"
     >
       <Quote className="w-8 h-8 text-[#198F38] mb-4 fill-[#198F38]/10" />
 
@@ -82,7 +82,7 @@ function TestimonialCard({ t, delay }: { t: Testimonial; delay: number }) {
         ))}
       </div>
 
-      <p className="text-[#042718] font-inter text-base md:text-[17px] font-normal leading-relaxed flex-1 mb-6">
+      <p className="text-[#042718] font-inter text-sm sm:text-base md:text-[17px] font-normal leading-[1.55] flex-1 mb-5 sm:mb-6">
         &ldquo;{t.quote}&rdquo;
       </p>
 
@@ -114,7 +114,7 @@ function TestimonialCard({ t, delay }: { t: Testimonial; delay: number }) {
 
 export default function Testimonials01Finsyc({ className }: { className?: string }) {
   return (
-    <section className={cn("w-full bg-[#F6FDFF] py-20 lg:py-32", className)}>
+    <section className={cn("w-full bg-[#F6FDFF] py-14 sm:py-20 lg:py-32", className)}>
       <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col items-center text-center mb-12 lg:mb-16">
           <motion.div
@@ -134,7 +134,7 @@ export default function Testimonials01Finsyc({ className }: { className?: string
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.15 }}
-            className="text-[#042718] font-onest text-[32px] sm:text-[44px] lg:text-[52px] font-semibold leading-tight lg:leading-[58px] tracking-[-1.2px] lg:tracking-[-1.8px] max-w-[720px]"
+            className="text-[#042718] font-onest text-[26px] xs:text-[28px] sm:text-[36px] md:text-[44px] lg:text-[52px] font-semibold leading-[1.1] lg:leading-[58px] tracking-[-0.8px] sm:tracking-[-1.2px] lg:tracking-[-1.8px] max-w-[720px] px-2 sm:px-0"
           >
             Trusted by{" "}
             <span className="font-playfair italic font-semibold text-black/40">
@@ -148,7 +148,7 @@ export default function Testimonials01Finsyc({ className }: { className?: string
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.25 }}
-            className="mt-4 text-[#042718] font-inter text-base sm:text-lg font-normal leading-relaxed opacity-80 max-w-[560px]"
+            className="mt-3 sm:mt-4 text-[#042718] font-inter text-sm sm:text-base md:text-lg font-normal leading-[1.5] sm:leading-relaxed opacity-80 max-w-[560px] px-2 sm:px-0"
           >
             From scrappy startups to enterprise CFOs — hear why Finley is the financial backbone of modern teams.
           </motion.p>

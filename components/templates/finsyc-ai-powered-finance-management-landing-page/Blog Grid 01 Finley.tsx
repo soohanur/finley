@@ -101,9 +101,9 @@ function PostCard({ post, isFeatured = false, delay = 0 }: { post: BlogPost; isF
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.7, delay, ease: "easeOut" as const }}
-        className="lg:col-span-2 group cursor-pointer flex flex-col lg:flex-row gap-6 lg:gap-10 p-6 lg:p-8 rounded-[24px] bg-white border border-[#042718]/[0.06] shadow-[0_1px_20px_0_rgba(4,39,24,0.04)] hover:shadow-[0_4px_30px_0_rgba(4,39,24,0.08)] transition-shadow"
+        className="lg:col-span-2 group cursor-pointer flex flex-col lg:flex-row gap-5 sm:gap-6 lg:gap-10 p-5 sm:p-6 lg:p-8 rounded-[20px] sm:rounded-[24px] bg-white border border-[#042718]/[0.06] shadow-[0_1px_20px_0_rgba(4,39,24,0.04)] hover:shadow-[0_4px_30px_0_rgba(4,39,24,0.08)] transition-shadow"
       >
-        <div className="relative w-full lg:w-[400px] aspect-[4/3] lg:aspect-auto lg:h-auto rounded-[16px] overflow-hidden shrink-0">
+        <div className="relative w-full lg:w-[400px] aspect-[16/10] sm:aspect-[4/3] lg:aspect-auto lg:h-auto rounded-[14px] sm:rounded-[16px] overflow-hidden shrink-0">
           <img
             src={post.cover}
             alt={post.title}
@@ -120,10 +120,10 @@ function PostCard({ post, isFeatured = false, delay = 0 }: { post: BlogPost; isF
                 <Clock className="w-3 h-3" /> {post.readTime}
               </span>
             </div>
-            <h3 className="text-[#042718] font-onest text-2xl lg:text-[32px] font-semibold leading-tight tracking-[-1px] mb-3 group-hover:text-[#198F38] transition-colors">
+            <h3 className="text-[#042718] font-onest text-lg sm:text-2xl lg:text-[32px] font-semibold leading-[1.2] tracking-[-0.5px] sm:tracking-[-1px] mb-2 sm:mb-3 group-hover:text-[#198F38] transition-colors">
               {post.title}
             </h3>
-            <p className="text-[#042718] font-inter text-base font-normal leading-relaxed opacity-80 mb-6">
+            <p className="text-[#042718] font-inter text-sm sm:text-base font-normal leading-[1.5] sm:leading-relaxed opacity-80 mb-5 sm:mb-6">
               {post.excerpt}
             </p>
           </div>
@@ -195,7 +195,7 @@ export default function BlogGrid01Finley({ className }: { className?: string }) 
   const rest = filtered.filter(p => !p.featured);
 
   return (
-    <section className={cn("w-full bg-white py-20 lg:py-32", className)}>
+    <section className={cn("w-full bg-white py-14 sm:py-20 lg:py-32", className)}>
       <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
 
         <div className="flex flex-col items-center text-center mb-12 lg:mb-14">
@@ -216,7 +216,7 @@ export default function BlogGrid01Finley({ className }: { className?: string }) 
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.15 }}
-            className="text-[#042718] font-onest font-semibold leading-tight tracking-[-1.2px] lg:tracking-[-1.8px] text-[32px] sm:text-[40px] lg:text-[44px] xl:text-[52px] max-w-[720px]"
+            className="text-[#042718] font-onest font-semibold leading-[1.1] tracking-[-0.8px] sm:tracking-[-1.2px] lg:tracking-[-1.8px] text-[26px] xs:text-[28px] sm:text-[36px] md:text-[40px] lg:text-[44px] xl:text-[52px] max-w-[720px] px-2 sm:px-0"
           >
             Stories from the{" "}
             <span className="font-playfair italic font-semibold text-black/40">
@@ -230,20 +230,20 @@ export default function BlogGrid01Finley({ className }: { className?: string }) 
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.25 }}
-            className="mt-4 text-[#042718] font-inter text-base sm:text-lg font-normal leading-relaxed opacity-80 max-w-[560px]"
+            className="mt-3 sm:mt-4 text-[#042718] font-inter text-sm sm:text-base md:text-lg font-normal leading-[1.5] sm:leading-relaxed opacity-80 max-w-[560px] px-2 sm:px-0"
           >
             Money insights, product updates, engineering deep-dives, and honest behind-the-scenes from the people building Finley.
           </motion.p>
         </div>
 
         {/* Category filter */}
-        <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mb-12 lg:mb-16">
+        <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mb-10 sm:mb-12 lg:mb-16">
           {categories.map((cat) => (
             <button
               key={cat}
               onClick={() => setActiveCategory(cat)}
               className={cn(
-                "px-4 py-2 rounded-full font-inter text-sm font-medium transition-all border",
+                "px-3 sm:px-4 py-1.5 sm:py-2 rounded-full font-inter text-xs sm:text-sm font-medium transition-all border whitespace-nowrap",
                 activeCategory === cat
                   ? "bg-[#042718] text-white border-[#042718]"
                   : "bg-white text-[#042718]/70 border-[#042718]/10 hover:border-[#042718]/30"
@@ -254,7 +254,7 @@ export default function BlogGrid01Finley({ className }: { className?: string }) 
           ))}
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 lg:gap-8">
           {featured && <PostCard post={featured} isFeatured delay={0} />}
           {rest.map((post, i) => (
             <PostCard key={post.title} post={post} delay={(i + 1) * 0.05} />

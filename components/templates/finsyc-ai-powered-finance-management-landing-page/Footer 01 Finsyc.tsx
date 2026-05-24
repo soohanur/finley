@@ -67,11 +67,11 @@ export default function Footer01Finsyc({ className }: { className?: string }) {
   };
 
   return (
-    <footer className={cn("w-full bg-[#042718] text-white pt-20 lg:pt-24 pb-10", className)}>
+    <footer className={cn("w-full bg-[#042718] text-white pt-14 sm:pt-20 lg:pt-24 pb-8 sm:pb-10", className)}>
       <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Top: Newsletter + Brand */}
-        <div className="grid grid-cols-1 lg:grid-cols-[1.2fr_1fr] gap-12 pb-16 border-b border-white/10">
+        <div className="grid grid-cols-1 lg:grid-cols-[1.2fr_1fr] gap-10 sm:gap-12 pb-12 sm:pb-16 border-b border-white/10">
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -79,13 +79,13 @@ export default function Footer01Finsyc({ className }: { className?: string }) {
             viewport={{ once: true }}
             className="flex flex-col"
           >
-            <h3 className="font-onest text-[28px] sm:text-[36px] lg:text-[44px] font-semibold leading-tight tracking-[-1.2px] mb-3">
+            <h3 className="font-onest text-[24px] xs:text-[26px] sm:text-[36px] lg:text-[44px] font-semibold leading-[1.1] tracking-[-0.8px] sm:tracking-[-1.2px] mb-3">
               Stay ahead of your{" "}
               <span className="font-playfair italic font-semibold text-white/50">
                 finances
               </span>
             </h3>
-            <p className="font-inter text-base lg:text-[18px] font-normal text-white/70 leading-relaxed mb-6 max-w-[480px]">
+            <p className="font-inter text-sm sm:text-base lg:text-[18px] font-normal text-white/70 leading-[1.5] sm:leading-relaxed mb-5 sm:mb-6 max-w-[480px]">
               Get weekly insights on AI-driven money management, product updates, and exclusive tips.
             </p>
 
@@ -116,7 +116,7 @@ export default function Footer01Finsyc({ className }: { className?: string }) {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-4 gap-8"
+            className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-4 gap-6 sm:gap-8"
           >
             {columns.map((col: FooterColumn) => (
               <div key={col.title} className="flex flex-col gap-3">

@@ -21,14 +21,14 @@ export default function CTA01Finsyc({ className }: { className?: string }) {
   ];
 
   return (
-    <section className={cn("w-full bg-white py-20 lg:py-32", className)}>
+    <section className={cn("w-full bg-white py-14 sm:py-20 lg:py-32", className)}>
       <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7, ease: "easeOut" as const }}
-          className="relative w-full overflow-hidden rounded-[32px] lg:rounded-[40px] bg-[#042718] min-h-[480px] lg:min-h-[560px] flex items-center justify-center px-6 py-16 lg:px-16 lg:py-24"
+          className="relative w-full overflow-hidden rounded-[24px] sm:rounded-[32px] lg:rounded-[40px] bg-[#042718] min-h-[400px] sm:min-h-[480px] lg:min-h-[560px] flex items-center justify-center px-5 sm:px-6 py-12 sm:py-16 lg:px-16 lg:py-24"
         >
           {/* Video BG */}
           <div className="absolute inset-0 z-0 opacity-30">
@@ -70,7 +70,7 @@ export default function CTA01Finsyc({ className }: { className?: string }) {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
-              className="text-white font-onest text-[36px] sm:text-[48px] lg:text-[60px] font-semibold leading-tight lg:leading-[68px] tracking-[-1.5px] lg:tracking-[-2.4px]"
+              className="text-white font-onest text-[28px] xs:text-[30px] sm:text-[40px] md:text-[48px] lg:text-[60px] font-semibold leading-[1.1] lg:leading-[68px] tracking-[-0.8px] sm:tracking-[-1.5px] lg:tracking-[-2.4px]"
             >
               Take control of your{" "}
               <span className="font-playfair italic font-semibold text-white/50">
@@ -84,7 +84,7 @@ export default function CTA01Finsyc({ className }: { className?: string }) {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.3 }}
-              className="mt-5 text-white/80 font-inter text-base sm:text-lg lg:text-[20px] font-normal leading-relaxed max-w-[560px]"
+              className="mt-4 sm:mt-5 text-white/80 font-inter text-sm sm:text-base md:text-lg lg:text-[20px] font-normal leading-[1.5] sm:leading-relaxed max-w-[560px]"
             >
               Join 18,000+ users who let Finsyc handle the boring parts of money management — so they can focus on growth.
             </motion.p>
@@ -98,20 +98,20 @@ export default function CTA01Finsyc({ className }: { className?: string }) {
               onMouseLeave={() => setIsHovered(false)}
               layout
               className={cn(
-                "flex items-center gap-3 py-2 rounded-full bg-white mt-10 group cursor-pointer relative h-14 transition-all duration-300",
+                "flex items-center gap-2 sm:gap-3 py-1.5 sm:py-2 rounded-full bg-white mt-7 sm:mt-10 group cursor-pointer relative h-11 sm:h-14 transition-all duration-300",
                 isHovered ? "flex-row-reverse pl-2 pr-5" : "flex-row pl-5 pr-2"
               )}
             >
               <motion.span
                 layout
-                className="font-inter text-base lg:text-[18px] font-medium leading-[28px] text-[#042718]"
+                className="font-inter text-[13px] sm:text-base lg:text-[18px] font-medium leading-[24px] sm:leading-[28px] text-[#042718]"
               >
                 Get 14-days free trial
               </motion.span>
 
               <motion.div
                 layout
-                className="w-10 h-10 rounded-full bg-[#042718] flex items-center justify-center relative overflow-hidden shrink-0"
+                className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-[#042718] flex items-center justify-center relative overflow-hidden shrink-0"
               >
                 <motion.div
                   animate={{

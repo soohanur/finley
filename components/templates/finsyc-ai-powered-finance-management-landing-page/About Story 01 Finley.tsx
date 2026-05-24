@@ -25,7 +25,7 @@ const values = [
 
 export default function AboutStory({ className }: { className?: string }) {
   return (
-    <section className={cn("w-full bg-white py-20 lg:py-32", className)}>
+    <section className={cn("w-full bg-white py-14 sm:py-20 lg:py-32", className)}>
       <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.1fr] gap-12 lg:gap-20 items-start">
 
@@ -47,7 +47,7 @@ export default function AboutStory({ className }: { className?: string }) {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.15 }}
-              className="text-[#042718] font-onest font-semibold leading-tight tracking-[-1.2px] lg:tracking-[-1.8px] text-[32px] sm:text-[40px] lg:text-[44px] xl:text-[52px]"
+              className="text-[#042718] font-onest font-semibold leading-[1.1] tracking-[-0.8px] sm:tracking-[-1.2px] lg:tracking-[-1.8px] text-[26px] xs:text-[28px] sm:text-[36px] md:text-[40px] lg:text-[44px] xl:text-[52px]"
             >
               Money tools{" "}
               <span className="font-playfair italic font-semibold text-black/40">
@@ -61,7 +61,7 @@ export default function AboutStory({ className }: { className?: string }) {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.25 }}
-              className="mt-5 text-[#042718] font-inter text-base lg:text-[18px] font-normal leading-relaxed opacity-80 max-w-[480px]"
+              className="mt-4 sm:mt-5 text-[#042718] font-inter text-sm sm:text-base lg:text-[18px] font-normal leading-[1.55] sm:leading-relaxed opacity-80 max-w-[480px]"
             >
               Finley started in 2022 around a kitchen table. Three engineers were tired of spreadsheets that lied and banking apps that hid the truth. We built the tool we wished existed — then thousands of people asked for the same thing.
             </motion.p>
@@ -80,11 +80,11 @@ export default function AboutStory({ className }: { className?: string }) {
                 <div className="w-12 h-12 rounded-xl bg-[#198F38]/10 border border-[#198F38]/20 flex items-center justify-center shrink-0">
                   <v.icon className="w-6 h-6 text-[#198F38]" strokeWidth={2.5} />
                 </div>
-                <div className="flex flex-col gap-2">
-                  <h3 className="text-[#042718] font-onest text-xl lg:text-2xl font-semibold tracking-[-0.6px]">
+                <div className="flex flex-col gap-1.5 sm:gap-2">
+                  <h3 className="text-[#042718] font-onest text-lg sm:text-xl lg:text-2xl font-semibold tracking-[-0.5px] sm:tracking-[-0.6px]">
                     {v.title}
                   </h3>
-                  <p className="text-[#042718] font-inter text-base lg:text-[17px] font-normal leading-relaxed opacity-80">
+                  <p className="text-[#042718] font-inter text-sm sm:text-base lg:text-[17px] font-normal leading-[1.5] sm:leading-relaxed opacity-80">
                     {v.description}
                   </p>
                 </div>

@@ -97,7 +97,7 @@ export default function FinsycOriginal4step({ className }: { className?: string 
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Onest:wght@400;500;600;700&family=Playfair+Display:ital,wght@1,600&display=swap" rel="stylesheet" crossOrigin="anonymous" />
 
-      <section className={"w-full bg-[#F6FDFF] py-20 lg:py-32 overflow-hidden " + (className || "")}>
+      <section className={"w-full bg-[#F6FDFF] py-14 sm:py-20 lg:py-32 overflow-hidden " + (className || "")}>
         <div className="w-full max-w-[1248px] mx-auto relative px-4 md:px-6">
           <div className="flex flex-col items-start gap-12 lg:gap-16">
 
@@ -120,7 +120,7 @@ export default function FinsycOriginal4step({ className }: { className?: string 
                 whileInView={{ x: 0, opacity: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.2 }}
-                className="text-[#042718] font-onest text-[32px] sm:text-[44px] lg:text-[52px] font-semibold leading-tight lg:leading-[58px] tracking-[-1.2px] lg:tracking-[-1.8px] w-full lg:max-w-[556px] text-left"
+                className="text-[#042718] font-onest text-[26px] xs:text-[28px] sm:text-[36px] md:text-[44px] lg:text-[52px] font-semibold leading-[1.1] lg:leading-[58px] tracking-[-0.8px] sm:tracking-[-1.2px] lg:tracking-[-1.8px] w-full lg:max-w-[556px] text-left"
               >
                 Manage your finances
                 <br className="block lg:hidden" />
@@ -150,16 +150,16 @@ export default function FinsycOriginal4step({ className }: { className?: string 
                         key={step.id}
                         onClick={() => setActiveTab(step.id)}
                         className={cn(
-                          "flex items-center gap-3 px-4 sm:px-6 py-2.5 rounded-xl transition-all duration-300 shrink-0 snap-start",
+                          "flex items-center gap-2 sm:gap-3 px-3 sm:px-6 py-2 sm:py-2.5 rounded-xl transition-all duration-300 shrink-0 snap-start",
                           isActive ? "bg-white" : "hover:bg-[#F6FDFF]"
                         )}
                       >
                         <step.icon
-                          className={cn("w-[22px] h-[22px]", isActive ? "text-[#198F38]" : "text-[#042718]/60")}
+                          className={cn("w-5 h-5 sm:w-[22px] sm:h-[22px] shrink-0", isActive ? "text-[#198F38]" : "text-[#042718]/60")}
                           strokeWidth={2.5}
                         />
                         <span className={cn(
-                          "font-inter text-base sm:text-[18px] leading-[28px] whitespace-nowrap",
+                          "font-inter text-sm sm:text-[18px] leading-[24px] sm:leading-[28px] whitespace-nowrap",
                           isActive ? "text-[#198F38] font-medium" : "text-[#042718]/60 font-normal"
                         )}>
                           {step.label}
@@ -172,7 +172,7 @@ export default function FinsycOriginal4step({ className }: { className?: string 
 
               {/* Main Content Card */}
               <div className="w-full">
-                <div className="w-full bg-white rounded-[32px] border border-[#042718]/[0.04] shadow-[0_0_20px_0_rgba(4,39,24,0.04)] flex flex-col lg:flex-row items-center justify-between p-6 lg:pt-4 lg:pr-4 lg:pb-4 lg:pl-16 gap-12 lg:gap-0 overflow-hidden">
+                <div className="w-full bg-white rounded-[24px] sm:rounded-[32px] border border-[#042718]/[0.04] shadow-[0_0_20px_0_rgba(4,39,24,0.04)] flex flex-col lg:flex-row items-center justify-between p-5 sm:p-6 lg:pt-4 lg:pr-4 lg:pb-4 lg:pl-16 gap-8 sm:gap-12 lg:gap-0 overflow-hidden">
 
                   {/* Left Column: Text Info */}
                   <div className="w-full lg:w-[534px] flex flex-col items-start text-left">
@@ -191,7 +191,7 @@ export default function FinsycOriginal4step({ className }: { className?: string 
                       initial={{ y: 20, opacity: 0 }}
                       animate={{ y: 0, opacity: 1 }}
                       transition={{ duration: 0.3 }}
-                      className="text-[#042718] font-onest text-[28px] lg:text-[34px] font-semibold leading-tight lg:leading-[38px] tracking-[-1px] mb-4"
+                      className="text-[#042718] font-onest text-[22px] sm:text-[28px] lg:text-[34px] font-semibold leading-[1.15] lg:leading-[38px] tracking-[-0.6px] sm:tracking-[-1px] mb-3 sm:mb-4"
                     >
                       {activeStep.heading}
                     </motion.h3>
@@ -201,7 +201,7 @@ export default function FinsycOriginal4step({ className }: { className?: string 
                       initial={{ y: 20, opacity: 0 }}
                       animate={{ y: 0, opacity: 1 }}
                       transition={{ delay: 0.1, duration: 0.3 }}
-                      className="text-[#042718] font-inter text-base lg:text-[18px] font-normal leading-relaxed lg:leading-[28px] opacity-80 mb-8"
+                      className="text-[#042718] font-inter text-sm sm:text-base lg:text-[18px] font-normal leading-[1.5] lg:leading-[28px] opacity-80 mb-6 sm:mb-8"
                     >
                       {activeStep.subheading}
                     </motion.p>
@@ -260,7 +260,7 @@ export default function FinsycOriginal4step({ className }: { className?: string 
                   </div>
 
                   {/* Right Column: UI Card */}
-                  <div className="w-full lg:w-[516px] h-[400px] sm:h-[500px] lg:h-[560px] relative rounded-[24px] overflow-hidden flex items-center justify-center">
+                  <div className="w-full lg:w-[516px] h-[280px] sm:h-[400px] md:h-[500px] lg:h-[560px] relative rounded-[20px] sm:rounded-[24px] overflow-hidden flex items-center justify-center">
                     {/* Video BG */}
                     <div className="absolute inset-0 z-0">
                       {isMounted && (

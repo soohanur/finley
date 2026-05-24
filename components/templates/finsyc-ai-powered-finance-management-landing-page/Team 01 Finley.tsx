@@ -53,7 +53,7 @@ const team: TeamMember[] = [
 
 export default function Team01Finley({ className }: { className?: string }) {
   return (
-    <section className={cn("w-full bg-[#F6FDFF] py-20 lg:py-32", className)}>
+    <section className={cn("w-full bg-[#F6FDFF] py-14 sm:py-20 lg:py-32", className)}>
       <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col items-center text-center mb-12 lg:mb-16">
           <motion.div
@@ -73,7 +73,7 @@ export default function Team01Finley({ className }: { className?: string }) {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.15 }}
-            className="text-[#042718] font-onest font-semibold leading-tight tracking-[-1.2px] lg:tracking-[-1.8px] text-[32px] sm:text-[40px] lg:text-[44px] xl:text-[52px] max-w-[720px]"
+            className="text-[#042718] font-onest font-semibold leading-[1.1] tracking-[-0.8px] sm:tracking-[-1.2px] lg:tracking-[-1.8px] text-[26px] xs:text-[28px] sm:text-[36px] md:text-[40px] lg:text-[44px] xl:text-[52px] max-w-[720px]"
           >
             People behind{" "}
             <span className="font-playfair italic font-semibold text-black/40">
@@ -86,13 +86,13 @@ export default function Team01Finley({ className }: { className?: string }) {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.25 }}
-            className="mt-4 text-[#042718] font-inter text-base sm:text-lg font-normal leading-relaxed opacity-80 max-w-[560px]"
+            className="mt-3 sm:mt-4 text-[#042718] font-inter text-sm sm:text-base md:text-lg font-normal leading-[1.5] sm:leading-relaxed opacity-80 max-w-[560px] px-2 sm:px-0"
           >
             Engineers, designers, and finance veterans from Stripe, Notion, Plaid, and Goldman — united by one boring mission: make money less stressful.
           </motion.p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
           {team.map((m, i) => (
             <motion.div
               key={m.name}

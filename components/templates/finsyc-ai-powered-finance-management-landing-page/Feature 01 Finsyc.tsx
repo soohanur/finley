@@ -24,7 +24,7 @@ function FeatureCard({ title, description, icon: Icon, uiSrc, width: _width, cla
       transition={{ duration: 0.8, delay, ease: [0.21, 0.45, 0.32, 0.9] as const }}
       className={"flex flex-col items-start shrink-0 border border-[#042718]/10 overflow-hidden bg-white group w-full rounded-[24px] sm:rounded-[32px] " + (className || "")}
     >
-      <div className="relative w-full h-[320px] sm:h-[400px] lg:h-[440px] overflow-hidden flex items-center justify-center p-6 sm:p-8 bg-[#F9FAFB]">
+      <div className="relative w-full h-[220px] sm:h-[320px] md:h-[400px] lg:h-[440px] overflow-hidden flex items-center justify-center p-4 sm:p-6 md:p-8 bg-[#F9FAFB]">
         {isMounted && (
           <video
             autoPlay
@@ -48,15 +48,15 @@ function FeatureCard({ title, description, icon: Icon, uiSrc, width: _width, cla
         </div>
       </div>
 
-      <div className="p-6 sm:p-10 flex flex-col sm:flex-row items-start gap-5 self-stretch bg-white">
-        <div className="w-10 h-10 p-2 flex items-center justify-center border border-[#198F38]/20 bg-[#198F38]/5 rounded-lg shrink-0">
-          <Icon className="w-6 h-6 text-[#198F38] stroke-[3px]" />
+      <div className="p-5 sm:p-8 lg:p-10 flex flex-col sm:flex-row items-start gap-4 sm:gap-5 self-stretch bg-white">
+        <div className="w-9 h-9 sm:w-10 sm:h-10 p-2 flex items-center justify-center border border-[#198F38]/20 bg-[#198F38]/5 rounded-lg shrink-0">
+          <Icon className="w-5 h-5 sm:w-6 sm:h-6 text-[#198F38] stroke-[3px]" />
         </div>
-        <div className="flex flex-col gap-[10px]">
-          <h3 className="text-[#042718] font-onest text-xl sm:text-2xl font-semibold leading-tight sm:leading-[30px] tracking-[-0.8px]">
+        <div className="flex flex-col gap-2">
+          <h3 className="text-[#042718] font-onest text-lg sm:text-2xl font-semibold leading-tight sm:leading-[30px] tracking-[-0.5px] sm:tracking-[-0.8px]">
             {title}
           </h3>
-          <p className="text-[#042718] font-inter text-base sm:text-lg font-normal leading-relaxed sm:leading-[28px] opacity-80">
+          <p className="text-[#042718] font-inter text-sm sm:text-lg font-normal leading-[1.5] sm:leading-[28px] opacity-80">
             {description}
           </p>
         </div>
@@ -110,7 +110,7 @@ export default function OriginaFinsycFeature({ className }: { className?: string
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Onest:wght@400;500;600;700&family=Playfair+Display:ital,wght@1,600&display=swap" rel="stylesheet" crossOrigin="anonymous" />
 
-      <section className={"w-full bg-[#FFFFFF] py-20 lg:py-32 overflow-hidden " + (className || "")}>
+      <section className={"w-full bg-[#FFFFFF] py-14 sm:py-20 lg:py-32 overflow-hidden " + (className || "")}>
         <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col items-center">
 
@@ -133,7 +133,7 @@ export default function OriginaFinsycFeature({ className }: { className?: string
                 whileInView={{ y: 0, opacity: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, delay: 0.2 }}
-                className="mt-6 w-full max-w-[686px] text-[#042718] text-center font-onest text-[32px] sm:text-[40px] lg:text-[52px] font-semibold leading-tight lg:leading-[58px] tracking-[-1.2px] sm:tracking-[-1.8px]"
+                className="mt-5 sm:mt-6 w-full max-w-[686px] text-[#042718] text-center font-onest text-[26px] xs:text-[28px] sm:text-[36px] md:text-[40px] lg:text-[52px] font-semibold leading-[1.1] lg:leading-[58px] tracking-[-0.8px] sm:tracking-[-1.2px] lg:tracking-[-1.8px] px-2 sm:px-0"
               >
                 Master Your Money
                 <br className="block sm:hidden" />
@@ -148,13 +148,13 @@ export default function OriginaFinsycFeature({ className }: { className?: string
                 whileInView={{ y: 0, opacity: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, delay: 0.3 }}
-                className="mt-3 w-full max-w-[514px] text-[#042718] text-center font-inter text-base sm:text-lg font-normal leading-relaxed sm:leading-7 opacity-80"
+                className="mt-3 w-full max-w-[514px] text-[#042718] text-center font-inter text-sm sm:text-base md:text-lg font-normal leading-[1.5] sm:leading-relaxed md:leading-7 opacity-80 px-2 sm:px-0"
               >
                 Everything you need to take control of your financial future in one simple, powerful application.
               </motion.p>
             </div>
 
-            <div className="mt-12 lg:mt-16 grid grid-cols-1 lg:grid-cols-2 gap-6 w-full">
+            <div className="mt-10 sm:mt-12 lg:mt-16 grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 w-full">
               {cards.map((card, idx) => (
                 <FeatureCard
                   key={idx}
