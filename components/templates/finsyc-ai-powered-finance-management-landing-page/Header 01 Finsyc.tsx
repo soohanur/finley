@@ -169,9 +169,9 @@ export default function FinleyHeader({ className }: { className?: string }) {
                   return (
                     <React.Fragment key={i}>
                       {partners.map((p) => (
-                        <div key={p.name} className="flex items-center gap-2.5 sm:gap-3 text-white opacity-95 shrink-0">
-                          <p.Icon className="w-7 h-7 sm:w-9 sm:h-9 md:w-11 md:h-11 lg:w-12 lg:h-12 xl:w-14 xl:h-14" strokeWidth={2.2} />
-                          <span className="font-onest text-2xl sm:text-3xl md:text-4xl lg:text-[40px] xl:text-[48px] font-semibold tracking-tight leading-none">
+                        <div key={p.name} className="flex items-center gap-2 text-white opacity-90 shrink-0">
+                          <p.Icon className="w-4 h-4 sm:w-5 sm:h-5 md:w-5 md:h-5 lg:w-6 lg:h-6 xl:w-6 xl:h-6" strokeWidth={2.2} />
+                          <span className="font-onest text-base sm:text-lg md:text-xl lg:text-[22px] xl:text-2xl font-semibold tracking-tight leading-none">
                             {p.name}
                           </span>
                         </div>
