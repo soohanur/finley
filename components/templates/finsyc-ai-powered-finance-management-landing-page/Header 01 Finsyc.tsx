@@ -56,15 +56,15 @@ export default function FinleyHeader({ className }: { className?: string }) {
               initial={{ y: 20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.4, duration: 0.7, ease: "easeOut" as const }}
-              className="flex items-center gap-1.5 sm:gap-2 px-2.5 sm:px-[14px] py-1 sm:py-1.5 rounded-full bg-white/10 backdrop-blur-sm border border-white/40 mb-3 sm:mb-5 lg:mb-6 whitespace-nowrap max-w-[calc(100vw-2rem)]"
+              className="flex items-center gap-2 px-3 sm:px-[14px] py-1.5 rounded-full bg-white/10 backdrop-blur-sm border border-white/40 mb-4 sm:mb-5 lg:mb-6 whitespace-nowrap max-w-[calc(100vw-2rem)]"
             >
               <div className="flex items-center gap-1 shrink-0">
-                <Sparkles className="w-3 h-3 sm:w-4 sm:h-4 fill-[#042718] text-[#042718]" />
-                <span className="font-inter text-[11px] sm:text-sm lg:text-base xl:text-[18px] font-medium leading-[20px] sm:leading-[28px] text-[#042718]">
+                <Sparkles className="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-[#042718] text-[#042718]" />
+                <span className="font-inter text-[13px] sm:text-sm lg:text-base xl:text-[18px] font-medium leading-[22px] sm:leading-[28px] text-[#042718]">
                   4.9 rating
                 </span>
               </div>
-              <span className="font-inter text-[11px] sm:text-sm lg:text-base xl:text-[18px] font-normal leading-[20px] sm:leading-[28px] text-black opacity-60 shrink-0">
+              <span className="font-inter text-[13px] sm:text-sm lg:text-base xl:text-[18px] font-normal leading-[22px] sm:leading-[28px] text-black opacity-60 shrink-0">
                 from 18.3k+ users
               </span>
             </motion.div>
@@ -74,7 +74,7 @@ export default function FinleyHeader({ className }: { className?: string }) {
               initial={{ y: 30, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.55, duration: 0.7, ease: "easeOut" as const }}
-              className="max-w-[750px] w-full text-center font-onest font-semibold leading-[1.08] sm:leading-[1.05] tracking-tight text-[#042718] text-[26px] xs:text-[28px] sm:text-[38px] md:text-[44px] lg:text-[44px] xl:text-[56px] 2xl:text-[66px] lg:tracking-[-2px] xl:tracking-[-2.5px] 2xl:tracking-[-3px] px-2 sm:px-0"
+              className="max-w-[750px] w-full text-center font-onest font-semibold leading-[1.1] sm:leading-[1.05] text-[#042718] text-[34px] xs:text-[38px] sm:text-[44px] md:text-[50px] lg:text-[48px] xl:text-[60px] 2xl:text-[68px] tracking-[-1px] sm:tracking-[-1.5px] lg:tracking-[-2px] xl:tracking-[-2.5px] 2xl:tracking-[-3px] px-2 sm:px-0"
             >
               Control Your Money with{" "}
               <span className="font-playfair italic font-semibold text-black opacity-50 tracking-normal">
@@ -88,7 +88,7 @@ export default function FinleyHeader({ className }: { className?: string }) {
               initial={{ y: 20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.7, duration: 0.7, ease: "easeOut" as const }}
-              className="max-w-[630px] w-full text-center mt-3 sm:mt-4 lg:mt-5 font-inter font-normal tracking-[-0.3px] text-[#042718] text-[13px] sm:text-base lg:text-[17px] xl:text-[20px] leading-[1.5] lg:leading-[1.55] px-2 sm:px-0"
+              className="max-w-[630px] w-full text-center mt-4 sm:mt-5 lg:mt-5 font-inter font-normal tracking-[-0.3px] text-[#042718] text-[15px] xs:text-base sm:text-[17px] lg:text-[17px] xl:text-[20px] leading-[1.5] lg:leading-[1.55] px-3 sm:px-0"
             >
               Automatically track your spending, predict upcoming expenses, and make smarter financial decisions without lifting a finger.
             </motion.p>
@@ -108,7 +108,7 @@ export default function FinleyHeader({ className }: { className?: string }) {
             >
               <motion.span
                 layout
-                className="font-inter text-[13px] sm:text-base lg:text-[17px] xl:text-[18px] font-medium leading-[24px] sm:leading-[28px] text-white"
+                className="font-inter text-[15px] sm:text-base lg:text-[17px] xl:text-[18px] font-medium leading-[24px] sm:leading-[28px] text-white"
               >
                 Get 14-days free trial
               </motion.span>
@@ -153,15 +153,15 @@ export default function FinleyHeader({ className }: { className?: string }) {
                   ease: "linear" as const,
                   repeat: Infinity as number
                 }}
-                className="flex items-center gap-8 sm:gap-14 lg:gap-20 w-fit"
+                className="flex items-center gap-10 sm:gap-14 lg:gap-20 w-fit"
               >
                 {[...Array(2)].map((_: unknown, i: number) => (
                   <React.Fragment key={i}>
-                    <img src="https://cdn.jiro.build/Amox/All%20SVG/Horizon.svg" alt="Horizon" className="h-4 sm:h-6 lg:h-7 xl:h-8 w-auto opacity-90" />
-                    <img src="https://cdn.jiro.build/Amox/All%20SVG/Naxus.svg" alt="Naxus" className="h-4 sm:h-6 lg:h-7 xl:h-8 w-auto opacity-90" />
-                    <img src="https://cdn.jiro.build/Amox/All%20SVG/Lumassa.svg" alt="Lumassa" className="h-4 sm:h-6 lg:h-7 xl:h-8 w-auto opacity-90" />
-                    <img src="https://cdn.jiro.build/Amox/All%20SVG/Cyborg.svg" alt="Cyborg" className="h-4 sm:h-6 lg:h-7 xl:h-8 w-auto opacity-90" />
-                    <img src="https://cdn.jiro.build/Amox/All%20SVG/Catalyst.svg" alt="Catalyst" className="h-4 sm:h-6 lg:h-7 xl:h-8 w-auto opacity-90" />
+                    <img src="https://cdn.jiro.build/Amox/All%20SVG/Horizon.svg" alt="Horizon" className="h-7 sm:h-8 md:h-9 lg:h-10 xl:h-11 w-auto opacity-90 brightness-0 invert" />
+                    <img src="https://cdn.jiro.build/Amox/All%20SVG/Naxus.svg" alt="Naxus" className="h-7 sm:h-8 md:h-9 lg:h-10 xl:h-11 w-auto opacity-90 brightness-0 invert" />
+                    <img src="https://cdn.jiro.build/Amox/All%20SVG/Lumassa.svg" alt="Lumassa" className="h-7 sm:h-8 md:h-9 lg:h-10 xl:h-11 w-auto opacity-90 brightness-0 invert" />
+                    <img src="https://cdn.jiro.build/Amox/All%20SVG/Cyborg.svg" alt="Cyborg" className="h-7 sm:h-8 md:h-9 lg:h-10 xl:h-11 w-auto opacity-90 brightness-0 invert" />
+                    <img src="https://cdn.jiro.build/Amox/All%20SVG/Catalyst.svg" alt="Catalyst" className="h-7 sm:h-8 md:h-9 lg:h-10 xl:h-11 w-auto opacity-90 brightness-0 invert" />
                   </React.Fragment>
                 ))}
               </motion.div>
